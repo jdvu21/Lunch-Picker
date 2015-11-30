@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2752DE631C06D618005B674C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2752DE621C06D618005B674C /* CloudKit.framework */; };
 		2752DE651C06D61A005B674C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2752DE641C06D61A005B674C /* HealthKit.framework */; };
+		2752DE691C06D7DA005B674C /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2752DE681C06D7DA005B674C /* CoreSpotlight.framework */; };
 		27CDDE831C04E0480003E5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDDE821C04E0480003E5AC /* AppDelegate.swift */; };
 		27CDDE851C04E0480003E5AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDDE841C04E0480003E5AC /* ViewController.swift */; };
 		27CDDE881C04E0480003E5AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CDDE861C04E0480003E5AC /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		2752DE611C06D613005B674C /* Brewski Dewski.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Brewski Dewski.entitlements"; sourceTree = "<group>"; };
 		2752DE621C06D618005B674C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2752DE641C06D61A005B674C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		2752DE681C06D7DA005B674C /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
 		27CDDE7F1C04E0480003E5AC /* Brewski Dewski.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brewski Dewski.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CDDE821C04E0480003E5AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27CDDE841C04E0480003E5AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2752DE691C06D7DA005B674C /* CoreSpotlight.framework in Frameworks */,
 				2752DE631C06D618005B674C /* CloudKit.framework in Frameworks */,
 				2752DE651C06D61A005B674C /* HealthKit.framework in Frameworks */,
 			);
@@ -45,6 +48,7 @@
 		27CDDE761C04E0480003E5AC = {
 			isa = PBXGroup;
 			children = (
+				2752DE681C06D7DA005B674C /* CoreSpotlight.framework */,
 				2752DE641C06D61A005B674C /* HealthKit.framework */,
 				2752DE621C06D618005B674C /* CloudKit.framework */,
 				27CDDE811C04E0480003E5AC /* Brewski Dewski */,
@@ -119,7 +123,7 @@
 				};
 			};
 			buildConfigurationList = 27CDDE7A1C04E0480003E5AC /* Build configuration list for PBXProject "Brewski Dewski" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
