@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FEEC7AA1C0E31FB00C37E51 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEC7A91C0E31FB00C37E51 /* RatingControl.swift */; };
 		2752DE631C06D618005B674C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2752DE621C06D618005B674C /* CloudKit.framework */; };
 		2752DE651C06D61A005B674C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2752DE641C06D61A005B674C /* HealthKit.framework */; };
 		2752DE691C06D7DA005B674C /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2752DE681C06D7DA005B674C /* CoreSpotlight.framework */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FEEC7A91C0E31FB00C37E51 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		2752DE611C06D613005B674C /* Brewski Dewski.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Brewski Dewski.entitlements"; sourceTree = "<group>"; };
 		2752DE621C06D618005B674C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2752DE641C06D61A005B674C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -71,6 +73,7 @@
 				27CDDE821C04E0480003E5AC /* AppDelegate.swift */,
 				27CDDE841C04E0480003E5AC /* ViewController.swift */,
 				27CDDE861C04E0480003E5AC /* Main.storyboard */,
+				1FEEC7A91C0E31FB00C37E51 /* RatingControl.swift */,
 				27CDDE891C04E0480003E5AC /* Assets.xcassets */,
 				27CDDE8B1C04E0480003E5AC /* LaunchScreen.storyboard */,
 				27CDDE8E1C04E0480003E5AC /* Info.plist */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CDDE851C04E0480003E5AC /* ViewController.swift in Sources */,
+				1FEEC7AA1C0E31FB00C37E51 /* RatingControl.swift in Sources */,
 				27CDDE831C04E0480003E5AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
