@@ -13,8 +13,7 @@ class RatingControl: UIView {
     // MARK: Properties
     var spacing = 5
     var stars = 5
-    
-    var rating: Int = 0 {
+    var rating = 0 {
         didSet {
             setNeedsLayout()
         }
@@ -63,11 +62,14 @@ class RatingControl: UIView {
             buttonFrame.origin.x = CGFloat(index * (buttonSize + spacing))
             button.frame = buttonFrame
         }
+        updateButtonSelectionStates()
     }
     
     // MARK: Button Action
     func ratingButtonTapped(button: UIButton) {
-        print("Button pressed")
+        rating = ratingButtons.indexOf(button)! + 1
+        updateButtonSelectionStates()
+        // print("Button pressed") // console msg for debug
     }
     
     /*
@@ -77,5 +79,11 @@ class RatingControl: UIView {
         // Drawing code
     }
     */
+    func updateButtonSelectionStates() {
+        for (index, button) in ratingButtons.enumerate() {
+            // if the index of a button is less than the rating, then that button should be selected
+            button.selected = index < rating
+        }
+    }
 
 }
