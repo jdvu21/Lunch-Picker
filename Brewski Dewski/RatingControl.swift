@@ -32,7 +32,7 @@ class RatingControl: UIView {
             let button = UIButton() // button init
             
             button.setImage(emptyStarImage, forState: .Normal)
-            button.setImage(filledStarImage, forState: .Normal)
+            button.setImage(filledStarImage, forState: .Selected)
             button.setImage(filledStarImage, forState: [.Highlighted, .Selected])
             
             button.adjustsImageWhenHighlighted = false
@@ -68,8 +68,9 @@ class RatingControl: UIView {
     // MARK: Button Action
     func ratingButtonTapped(button: UIButton) {
         rating = ratingButtons.indexOf(button)! + 1
+        
         updateButtonSelectionStates()
-        // print("Button pressed") // console msg for debug
+        print("Button pressed") // console msg for debug
     }
     
     /*
@@ -81,7 +82,7 @@ class RatingControl: UIView {
     */
     func updateButtonSelectionStates() {
         for (index, button) in ratingButtons.enumerate() {
-            // if the index of a button is less than the rating, then that button should be selected
+            // If the index of a button is less than the rating, that button should be selected.
             button.selected = index < rating
         }
     }
