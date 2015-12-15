@@ -9,7 +9,8 @@
 import UIKit
 import CloudKit
 import CoreData
-
+//
+import Darwin
 
 
 
@@ -17,60 +18,55 @@ import CoreData
 class ViewController: UIViewController {
     
     
-    
-    
-    
-    // MARK: CoreData
-    
-    var restaurants = [NSManagedObject]()
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //MARK: Add a new Restaurant
+    let privateDB = CKContainer.defaultContainer().privateCloudDatabase
+    let publicDB = CKContainer.defaultContainer().publicCloudDatabase
     
     @IBOutlet weak var newPlaceName: UITextField!
     @IBOutlet weak var newPlaceType: UITextField!
-    @IBOutlet weak var newPlaceFavoriteDish: UITextField?
+    @IBOutlet weak var newPlaceFavoriteDish: UITextField!
     @IBOutlet weak var newPlaceRating: RatingControl!
 
 
     @IBAction func submitNewRestaurant() {
         
-        let name = newPlaceName.text
-        let type = newPlaceType.text
-        let favDish = newPlaceFavoriteDish?.text
-        let restaurantRating = newPlaceRating.rating
+        //  CKRecord for Private DB
+        let privateRestaurant = CKRecord(recordType: "Restaurant")
+        privateRestaurant["Name"] = newPlaceName.text!
+        privateRestaurant["Type"] = newPlaceType.text!
+        privateRestaurant["FavoriteDish"] = newPlaceFavoriteDish.text!
+        privateRestaurant["Rating"] = newPlaceRating.rating
         
-        
-        
-       //let restaurant = Restaurant()
-            
-//        restaurant.name = name
-//        restaurant.type = type
-//        restaurant.favoritedish = favDish
-//        restaurant.rating = restaurantRating
-//        
-//        //restaurants.append(restaurant)
-//        
-//        print(restaurant)
-        
-    }
-    
-    
-    //  When "Submit" is pressed, newplace is saved to public CloudKit and to CoreData(or plsit)
-    
+        //  CKRecord for Public DB
+        let publicRestaurant = CKRecord(recordType: "Restaurant")
+        publicRestaurant["Name"] = newPlaceName.text!
+        publicRestaurant["Type"] = newPlaceType.text!
+        publicRestaurant["FavoriteDish"] = newPlaceFavoriteDish.text!
+        publicRestaurant["Rating"] = newPlaceRating.rating
 
-    //
-    
+        //  Saves New Place to privateDB
+        privateDB.saveRecord(privateRestaurant) {
+            (record, error) -> Void in
+            
+            if error != nil {
+                print(error)
+                return
+            }
+            //  Saves New Place to publicDB
+            self.publicDB.saveRecord(publicRestaurant) {
+                (record, error) -> Void in
+                
+                if error != nil {
+                    print(error)
+                    return
+                }
+            }
+        }
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
         
     }

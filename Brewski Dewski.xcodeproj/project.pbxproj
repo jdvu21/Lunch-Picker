@@ -10,6 +10,7 @@
 		1FEEC7AA1C0E31FB00C37E51 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEC7A91C0E31FB00C37E51 /* RatingControl.swift */; };
 		27118EF21C1F991500A4B5FE /* PersonalRestaurants.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27118EF01C1F991500A4B5FE /* PersonalRestaurants.xcdatamodeld */; };
 		27118F151C1F9CA300A4B5FE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27118F141C1F9CA300A4B5FE /* TableViewController.swift */; };
+		271910B11C20CEA8001C0537 /* MyRestaurants.plist in Resources */ = {isa = PBXBuildFile; fileRef = 271910B01C20CEA8001C0537 /* MyRestaurants.plist */; };
 		2752DE631C06D618005B674C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2752DE621C06D618005B674C /* CloudKit.framework */; };
 		2752DE651C06D61A005B674C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2752DE641C06D61A005B674C /* HealthKit.framework */; };
 		2752DE691C06D7DA005B674C /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2752DE681C06D7DA005B674C /* CoreSpotlight.framework */; };
@@ -24,6 +25,7 @@
 		1FEEC7A91C0E31FB00C37E51 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		27118EF11C1F991500A4B5FE /* PersonalRestaurants.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersonalRestaurants.xcdatamodel; sourceTree = "<group>"; };
 		27118F141C1F9CA300A4B5FE /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		271910B01C20CEA8001C0537 /* MyRestaurants.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MyRestaurants.plist; sourceTree = "<group>"; };
 		2752DE611C06D613005B674C /* Brewski Dewski.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Brewski Dewski.entitlements"; sourceTree = "<group>"; };
 		2752DE621C06D618005B674C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2752DE641C06D61A005B674C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -77,6 +79,7 @@
 				27CDDE821C04E0480003E5AC /* AppDelegate.swift */,
 				27118EF01C1F991500A4B5FE /* PersonalRestaurants.xcdatamodeld */,
 				27CDDE841C04E0480003E5AC /* ViewController.swift */,
+				271910B01C20CEA8001C0537 /* MyRestaurants.plist */,
 				27CDDE861C04E0480003E5AC /* Main.storyboard */,
 				27118F141C1F9CA300A4B5FE /* TableViewController.swift */,
 				1FEEC7A91C0E31FB00C37E51 /* RatingControl.swift */,
@@ -157,6 +160,7 @@
 				27CDDE8D1C04E0480003E5AC /* LaunchScreen.storyboard in Resources */,
 				27CDDE8A1C04E0480003E5AC /* Assets.xcassets in Resources */,
 				27CDDE881C04E0480003E5AC /* Main.storyboard in Resources */,
+				271910B11C20CEA8001C0537 /* MyRestaurants.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
