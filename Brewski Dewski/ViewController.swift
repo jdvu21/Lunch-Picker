@@ -8,29 +8,53 @@
 
 import UIKit
 import CloudKit
+import CoreData
 
-struct Restuant {
-    
-    var name: String
-    var type: String
-    var favoriteDish: String?
-    
-    
-}
+
 
 
 //Sorting public should not be difficult, linking resturants to users will be difficult
 class ViewController: UIViewController {
+    
+    
+    
+    
+    
+    // MARK: CoreData
+    //var restaurants = [NSManagedObject]()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     @IBOutlet weak var newPlaceName: UITextField!
     @IBOutlet weak var newPlaceType: UITextField!
     @IBOutlet weak var newPlaceFavoriteDish: UITextField?
     
-    //  Submit new place
-    @IBOutlet weak var newPlaceSubmit: UIButton!
+    @IBOutlet weak var newPlaceRating: RatingControl!
+
+
+    @IBAction func submitNewRestaurant() {
+        
+        var name = newPlaceName.text
+        var type = newPlaceType.text
+        var favDish = newPlaceFavoriteDish?.text
+        var restaurantRating = newPlaceRating.rating
+        
+        
+
+        print(name, type, favDish, restaurantRating)
+        
+    }
     
     
-    //  When "Submit" is pressed, newplace is saved to public CloudKit and to personal plist data.
+    //  When "Submit" is pressed, newplace is saved to public CloudKit and to CoreData
     
 
     //

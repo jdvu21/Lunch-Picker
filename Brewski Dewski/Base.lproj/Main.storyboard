@@ -25,7 +25,7 @@
         <!--Your Beers-->
         <scene sceneID="M6f-Tv-thL">
             <objects>
-                <tableViewController title="Your Beers" id="HTM-QP-2PV" sceneMemberID="viewController">
+                <tableViewController title="Your Beers" id="HTM-QP-2PV" customClass="TableViewController" customModule="Brewski_Dewski" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BeerCells" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="phf-uO-AZJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -265,7 +265,7 @@
                                 </variation>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restuarant chosen via alogrithm" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="97q-Eo-4Rz">
-                                <rect key="frame" x="20" y="152" width="560" height="50"/>
+                                <rect key="frame" x="20" y="152.5" width="560" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="CUs-pQ-CBb"/>
                                     <constraint firstAttribute="width" constant="560" id="Dt5-rY-1mL"/>
@@ -284,6 +284,8 @@
                             <constraint firstItem="97q-Eo-4Rz" firstAttribute="centerX" secondItem="cbD-lO-ZTR" secondAttribute="centerX" id="PKH-7z-7Nf"/>
                             <constraint firstItem="b3B-3X-0uE" firstAttribute="top" secondItem="Vso-Hf-fGW" secondAttribute="bottom" constant="36" id="UOk-24-8zs"/>
                             <constraint firstItem="b3B-3X-0uE" firstAttribute="centerX" secondItem="cbD-lO-ZTR" secondAttribute="centerX" id="bG8-Ef-EJm"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="97q-Eo-4Rz" secondAttribute="leading" id="sEh-AM-bi8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="97q-Eo-4Rz" secondAttribute="trailing" id="zUn-2P-BML"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -351,6 +353,9 @@
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="submitNewRestaurant" destination="y12-yP-Su5" eventType="touchUpInside" id="cGB-7D-4st"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a New Place" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1f-kW-TnN">
                                         <rect key="frame" x="175" y="27" width="250" height="50"/>
@@ -397,7 +402,7 @@
                     <connections>
                         <outlet property="newPlaceFavoriteDish" destination="Ngu-w2-WiH" id="FDZ-HZ-bOp"/>
                         <outlet property="newPlaceName" destination="XH6-O3-bII" id="wgn-mO-HfD"/>
-                        <outlet property="newPlaceSubmit" destination="ymd-3e-OVs" id="WO5-HA-VMy"/>
+                        <outlet property="newPlaceRating" destination="rH3-ip-sBg" id="TyN-rz-uar"/>
                         <outlet property="newPlaceType" destination="XCe-09-WhQ" id="Qmc-ak-oNJ"/>
                     </connections>
                 </viewController>
