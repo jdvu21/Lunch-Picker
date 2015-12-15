@@ -70,7 +70,7 @@ class RatingControl: UIView {
         rating = ratingButtons.indexOf(button)! + 1
         
         updateButtonSelectionStates()
-        print("Button pressed") // console msg for debug
+        //print("Button pressed") // console msg for debug
     }
     
     /*

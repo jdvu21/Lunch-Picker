@@ -21,7 +21,8 @@ class ViewController: UIViewController {
     
     
     // MARK: CoreData
-    //var restaurants = [NSManagedObject]()
+    
+    var restaurants = [NSManagedObject]()
     
     
     
@@ -31,30 +32,38 @@ class ViewController: UIViewController {
     
     
     
+    //MARK: Add a new Restaurant
     
-
     @IBOutlet weak var newPlaceName: UITextField!
     @IBOutlet weak var newPlaceType: UITextField!
     @IBOutlet weak var newPlaceFavoriteDish: UITextField?
-    
     @IBOutlet weak var newPlaceRating: RatingControl!
 
 
     @IBAction func submitNewRestaurant() {
         
-        var name = newPlaceName.text
-        var type = newPlaceType.text
-        var favDish = newPlaceFavoriteDish?.text
-        var restaurantRating = newPlaceRating.rating
+        let name = newPlaceName.text
+        let type = newPlaceType.text
+        let favDish = newPlaceFavoriteDish?.text
+        let restaurantRating = newPlaceRating.rating
         
         
-
-        print(name, type, favDish, restaurantRating)
+        
+       //let restaurant = Restaurant()
+            
+//        restaurant.name = name
+//        restaurant.type = type
+//        restaurant.favoritedish = favDish
+//        restaurant.rating = restaurantRating
+//        
+//        //restaurants.append(restaurant)
+//        
+//        print(restaurant)
         
     }
     
     
-    //  When "Submit" is pressed, newplace is saved to public CloudKit and to CoreData
+    //  When "Submit" is pressed, newplace is saved to public CloudKit and to CoreData(or plsit)
     
 
     //
@@ -62,7 +71,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         
     }
     
