@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F7C97AD1C2225E000F05150 /* RestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C97AC1C2225E000F05150 /* RestTableViewCell.swift */; };
+		1F7C97AF1C222D8500F05150 /* RestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C97AE1C222D8500F05150 /* RestTableViewController.swift */; };
 		1FEEC7AA1C0E31FB00C37E51 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEC7A91C0E31FB00C37E51 /* RatingControl.swift */; };
 		27118EF21C1F991500A4B5FE /* PersonalRestaurants.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27118EF01C1F991500A4B5FE /* PersonalRestaurants.xcdatamodeld */; };
 		27118F151C1F9CA300A4B5FE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27118F141C1F9CA300A4B5FE /* TableViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F7C97AC1C2225E000F05150 /* RestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestTableViewCell.swift; sourceTree = "<group>"; };
+		1F7C97AE1C222D8500F05150 /* RestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestTableViewController.swift; sourceTree = "<group>"; };
 		1FEEC7A91C0E31FB00C37E51 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		27118EF11C1F991500A4B5FE /* PersonalRestaurants.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersonalRestaurants.xcdatamodel; sourceTree = "<group>"; };
 		27118F141C1F9CA300A4B5FE /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				27118EF01C1F991500A4B5FE /* PersonalRestaurants.xcdatamodeld */,
 				27CDDE841C04E0480003E5AC /* ViewController.swift */,
 				27CDDE861C04E0480003E5AC /* Main.storyboard */,
+				1F7C97AE1C222D8500F05150 /* RestTableViewController.swift */,
+				1F7C97AC1C2225E000F05150 /* RestTableViewCell.swift */,
 				27118F141C1F9CA300A4B5FE /* TableViewController.swift */,
 				1FEEC7A91C0E31FB00C37E51 /* RatingControl.swift */,
 				27CDDE891C04E0480003E5AC /* Assets.xcassets */,
@@ -171,7 +177,9 @@
 				27CDDE851C04E0480003E5AC /* ViewController.swift in Sources */,
 				1FEEC7AA1C0E31FB00C37E51 /* RatingControl.swift in Sources */,
 				27118F151C1F9CA300A4B5FE /* TableViewController.swift in Sources */,
+				1F7C97AF1C222D8500F05150 /* RestTableViewController.swift in Sources */,
 				27CDDE831C04E0480003E5AC /* AppDelegate.swift in Sources */,
+				1F7C97AD1C2225E000F05150 /* RestTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
