@@ -20,12 +20,15 @@ class ViewController: UIViewController {
     
     let privateDB = CKContainer.defaultContainer().privateCloudDatabase
     let publicDB = CKContainer.defaultContainer().publicCloudDatabase
+    let ratingPredicate = NSPredicate(format: "Rating >= 4")
     
     @IBOutlet weak var newPlaceName: UITextField!
     @IBOutlet weak var newPlaceType: UITextField!
     @IBOutlet weak var newPlaceFavoriteDish: UITextField!
     @IBOutlet weak var newPlaceRating: RatingControl!
 
+    
+    @IBOutlet weak var selectedLunch: UITextField!
 
     @IBAction func submitNewRestaurant() {
         
@@ -64,10 +67,61 @@ class ViewController: UIViewController {
 
     }
     
+    @IBAction func stickWithTheFamiliar() {
+        
+        let query = CKQuery(recordType: "Restaurant", predicate: ratingPredicate)
+        
+        selectedLunch.text = "Wait for it..."
+        
+        privateDB.performQuery(query, inZoneWithID: nil) {
+                results, error in
+            
+                if error != nil {
+                    print(error!.localizedDescription)
+                    print("This is an Error")
+                } else {
+                    // Insert guard!!
+                    print(results?.count)
+                    let choosenRestaurant = results![random()%(results?.count)!]
+                    print(choosenRestaurant["Name"]!)
+                    
+                    self.selectedLunch.text = (choosenRestaurant["Name"]! as! String)
+                    
+                }
+            }
+        
+    }
+    
+    @IBAction func trySomethingNew() {
+        
+        let query = CKQuery(recordType: "Restaurant", predicate: ratingPredicate)
+        
+        selectedLunch.text = "Wait for it..."
+        
+        publicDB.performQuery(query, inZoneWithID: nil) {
+            results, error in
+            
+            if error != nil {
+                print(error!.localizedDescription)
+                print("This is an Error")
+            } else {
+                // Insert guard!!
+                print(results?.count)
+                let choosenRestaurant = results![random()%(results?.count)!]
+                print(choosenRestaurant["Name"]!)
+                
+                self.selectedLunch.text = (choosenRestaurant["Name"]! as! String)
+                
+            }
+        }
+        
+        
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
         
     }
     

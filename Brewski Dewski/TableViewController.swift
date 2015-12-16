@@ -18,6 +18,11 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         
         
+        // Pull privateDB entries and display in list view.
+        
+        
+        
+        
     }
     
     

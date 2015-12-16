@@ -22,10 +22,10 @@
             </objects>
             <point key="canvasLocation" x="374" y="-496"/>
         </scene>
-        <!--Your Beers-->
+        <!--Your Restaurants-->
         <scene sceneID="M6f-Tv-thL">
             <objects>
-                <tableViewController title="Your Beers" id="HTM-QP-2PV" customClass="TableViewController" customModule="Brewski_Dewski" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Your Restaurants" id="HTM-QP-2PV" customClass="TableViewController" customModule="Brewski_Dewski" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BeerCells" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="phf-uO-AZJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="2154" y="-1547"/>
         </scene>
-        <!--Brewski Dewski-->
+        <!--Lunchi Munchi-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Brewski_Dewski" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,8 +66,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Tq-bB-t54">
                                 <rect key="frame" x="300" y="310" width="300" height="246"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oo-wW-Jda">
-                                        <rect key="frame" x="84" y="113.5" width="133" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo Placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oo-wW-Jda">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="246"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -75,9 +75,19 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.73922595531501345" green="0.001156872205901105" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="0oo-wW-Jda" firstAttribute="leading" secondItem="7Tq-bB-t54" secondAttribute="leading" id="Drz-eC-aIV"/>
+                                    <constraint firstItem="0oo-wW-Jda" firstAttribute="top" secondItem="7Tq-bB-t54" secondAttribute="top" id="LMH-8T-02l"/>
                                     <constraint firstItem="0oo-wW-Jda" firstAttribute="centerX" secondItem="7Tq-bB-t54" secondAttribute="centerX" id="QfI-UY-MB3"/>
+                                    <constraint firstAttribute="trailing" secondItem="0oo-wW-Jda" secondAttribute="trailing" id="a0y-Y6-yQu"/>
+                                    <constraint firstAttribute="bottom" secondItem="0oo-wW-Jda" secondAttribute="bottom" id="dqf-BP-AYB"/>
                                     <constraint firstItem="0oo-wW-Jda" firstAttribute="centerY" secondItem="7Tq-bB-t54" secondAttribute="centerY" id="ujI-QQ-3q6"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="QfI-UY-MB3"/>
+                                        <exclude reference="ujI-QQ-3q6"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2t-7e-Dqi">
                                 <rect key="frame" x="0.0" y="310" width="300" height="246"/>
@@ -123,15 +133,21 @@
                                 <rect key="frame" x="0.0" y="64" width="300" height="246"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKG-ap-7Ee">
-                                        <rect key="frame" x="100" y="98" width="100" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="246"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="qad-JY-jvc"/>
+                                            <constraint firstAttribute="width" constant="150" id="qad-JY-jvc"/>
                                             <constraint firstAttribute="height" constant="50" id="xQp-rH-saY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Your Beers">
+                                        <state key="normal" title="Your Restaurants">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="qad-JY-jvc"/>
+                                                <exclude reference="xQp-rH-saY"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <segue destination="HTM-QP-2PV" kind="show" id="yit-hH-WP3"/>
                                         </connections>
@@ -139,23 +155,41 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.48997068649999997" green="1" blue="0.24126582999999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="ZKG-ap-7Ee" firstAttribute="top" secondItem="fTe-y1-xFx" secondAttribute="top" id="LKS-b3-y8x"/>
                                     <constraint firstItem="ZKG-ap-7Ee" firstAttribute="centerX" secondItem="fTe-y1-xFx" secondAttribute="centerX" id="Zzo-MT-S1S"/>
+                                    <constraint firstItem="ZKG-ap-7Ee" firstAttribute="centerX" secondItem="fTe-y1-xFx" secondAttribute="centerX" id="abE-eA-XOn"/>
                                     <constraint firstItem="ZKG-ap-7Ee" firstAttribute="centerY" secondItem="fTe-y1-xFx" secondAttribute="centerY" id="h0z-G2-gN0"/>
+                                    <constraint firstItem="ZKG-ap-7Ee" firstAttribute="leading" secondItem="fTe-y1-xFx" secondAttribute="leading" id="l2a-Lr-Tkj"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZKG-ap-7Ee" secondAttribute="trailing" id="lnr-sU-3dK"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZKG-ap-7Ee" secondAttribute="bottom" id="lxc-5J-m5D"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Zzo-MT-S1S"/>
+                                        <exclude reference="abE-eA-XOn"/>
+                                        <exclude reference="h0z-G2-gN0"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zo8-bF-6n0">
                                 <rect key="frame" x="300" y="64" width="300" height="246"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5v-nO-8mB">
-                                        <rect key="frame" x="100" y="98" width="100" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="246"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="R5B-DF-qvz"/>
+                                            <constraint firstAttribute="width" constant="150" id="R5B-DF-qvz"/>
                                             <constraint firstAttribute="height" constant="50" id="pE8-hU-0Jp"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Add a Beer?">
+                                        <state key="normal" title="Add a Restaurant">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="R5B-DF-qvz"/>
+                                                <exclude reference="pE8-hU-0Jp"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <segue destination="y12-yP-Su5" kind="show" id="lqf-Xh-3wx"/>
                                         </connections>
@@ -163,9 +197,19 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.071741149341799648" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="y5v-nO-8mB" secondAttribute="bottom" id="1UR-xS-0Cu"/>
+                                    <constraint firstAttribute="trailing" secondItem="y5v-nO-8mB" secondAttribute="trailing" id="4FP-2A-aEt"/>
                                     <constraint firstItem="y5v-nO-8mB" firstAttribute="centerY" secondItem="Zo8-bF-6n0" secondAttribute="centerY" id="BT3-V3-GB0"/>
+                                    <constraint firstItem="y5v-nO-8mB" firstAttribute="leading" secondItem="Zo8-bF-6n0" secondAttribute="leading" id="CRW-Nu-d44"/>
+                                    <constraint firstItem="y5v-nO-8mB" firstAttribute="top" secondItem="Zo8-bF-6n0" secondAttribute="top" id="W35-eC-jCC"/>
                                     <constraint firstItem="y5v-nO-8mB" firstAttribute="centerX" secondItem="Zo8-bF-6n0" secondAttribute="centerX" id="Y6L-Ki-wQD"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BT3-V3-GB0"/>
+                                        <exclude reference="Y6L-Ki-wQD"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -191,7 +235,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Brewski Dewski" id="lFU-JE-jdl"/>
+                    <navigationItem key="navigationItem" title="Lunchi Munchi" id="lFU-JE-jdl"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -201,7 +245,7 @@
         <!--Suggetions-->
         <scene sceneID="JeD-4U-5oV">
             <objects>
-                <viewController title="Suggetions" id="Xuk-lX-cWu" sceneMemberID="viewController">
+                <viewController title="Suggetions" id="Xuk-lX-cWu" customClass="ViewController" customModule="Brewski_Dewski" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vso-Hf-fGW"/>
                         <viewControllerLayoutGuide type="bottom" id="Uzv-BK-9Pw"/>
@@ -238,6 +282,9 @@
                                         <exclude reference="Y4K-fU-LWO"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="stickWithTheFamiliar" destination="Xuk-lX-cWu" eventType="touchUpInside" id="6dS-aI-cno"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lA-Em-Jsb">
                                 <rect key="frame" x="150" y="400" width="300" height="80"/>
@@ -263,6 +310,9 @@
                                         <exclude reference="NdP-pn-9ZZ"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="trySomethingNew" destination="Xuk-lX-cWu" eventType="touchUpInside" id="vht-RT-c1A"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restuarant chosen via alogrithm" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="97q-Eo-4Rz">
                                 <rect key="frame" x="20" y="152.5" width="560" height="50"/>
@@ -288,15 +338,18 @@
                             <constraint firstAttribute="trailingMargin" secondItem="97q-Eo-4Rz" secondAttribute="trailing" id="zUn-2P-BML"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="selectedLunch" destination="97q-Eo-4Rz" id="NoY-M3-UwY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3Z-eg-PDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2118" y="-81"/>
         </scene>
-        <!--Add a Beer-->
+        <!--Add a Restaurant-->
         <scene sceneID="XZ9-9o-3l8">
             <objects>
-                <viewController title="Add a Beer" id="y12-yP-Su5" customClass="ViewController" customModule="Brewski_Dewski" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add a Restaurant" id="y12-yP-Su5" customClass="ViewController" customModule="Brewski_Dewski" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DEn-lI-zHW"/>
                         <viewControllerLayoutGuide type="bottom" id="2nA-MC-I86"/>
