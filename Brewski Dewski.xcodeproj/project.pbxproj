@@ -10,34 +10,25 @@
 		1F7C97AD1C2225E000F05150 /* RestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C97AC1C2225E000F05150 /* RestTableViewCell.swift */; };
 		1F7C97AF1C222D8500F05150 /* RestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7C97AE1C222D8500F05150 /* RestTableViewController.swift */; };
 		1FEEC7AA1C0E31FB00C37E51 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FEEC7A91C0E31FB00C37E51 /* RatingControl.swift */; };
-		27118EF21C1F991500A4B5FE /* PersonalRestaurants.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27118EF01C1F991500A4B5FE /* PersonalRestaurants.xcdatamodeld */; };
-		27118F151C1F9CA300A4B5FE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27118F141C1F9CA300A4B5FE /* TableViewController.swift */; };
 		2752DE631C06D618005B674C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2752DE621C06D618005B674C /* CloudKit.framework */; };
-		2752DE651C06D61A005B674C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2752DE641C06D61A005B674C /* HealthKit.framework */; };
-		2752DE691C06D7DA005B674C /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2752DE681C06D7DA005B674C /* CoreSpotlight.framework */; };
 		27CDDE831C04E0480003E5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDDE821C04E0480003E5AC /* AppDelegate.swift */; };
 		27CDDE851C04E0480003E5AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CDDE841C04E0480003E5AC /* ViewController.swift */; };
 		27CDDE881C04E0480003E5AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CDDE861C04E0480003E5AC /* Main.storyboard */; };
 		27CDDE8A1C04E0480003E5AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CDDE891C04E0480003E5AC /* Assets.xcassets */; };
-		27CDDE8D1C04E0480003E5AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CDDE8B1C04E0480003E5AC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F7C97AC1C2225E000F05150 /* RestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestTableViewCell.swift; sourceTree = "<group>"; };
 		1F7C97AE1C222D8500F05150 /* RestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestTableViewController.swift; sourceTree = "<group>"; };
 		1FEEC7A91C0E31FB00C37E51 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
-		27118EF11C1F991500A4B5FE /* PersonalRestaurants.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersonalRestaurants.xcdatamodel; sourceTree = "<group>"; };
-		27118F141C1F9CA300A4B5FE /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		2752DE611C06D613005B674C /* Brewski Dewski.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Brewski Dewski.entitlements"; sourceTree = "<group>"; };
 		2752DE621C06D618005B674C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		2752DE641C06D61A005B674C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		2752DE681C06D7DA005B674C /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
 		27CDDE7F1C04E0480003E5AC /* Brewski Dewski.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brewski Dewski.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CDDE821C04E0480003E5AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27CDDE841C04E0480003E5AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27CDDE871C04E0480003E5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27CDDE891C04E0480003E5AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		27CDDE8C1C04E0480003E5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27CDDE8E1C04E0480003E5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,9 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2752DE691C06D7DA005B674C /* CoreSpotlight.framework in Frameworks */,
 				2752DE631C06D618005B674C /* CloudKit.framework in Frameworks */,
-				2752DE651C06D61A005B674C /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				2752DE681C06D7DA005B674C /* CoreSpotlight.framework */,
-				2752DE641C06D61A005B674C /* HealthKit.framework */,
 				2752DE621C06D618005B674C /* CloudKit.framework */,
 				27CDDE811C04E0480003E5AC /* Brewski Dewski */,
 				27CDDE801C04E0480003E5AC /* Products */,
@@ -79,15 +67,12 @@
 			children = (
 				2752DE611C06D613005B674C /* Brewski Dewski.entitlements */,
 				27CDDE821C04E0480003E5AC /* AppDelegate.swift */,
-				27118EF01C1F991500A4B5FE /* PersonalRestaurants.xcdatamodeld */,
 				27CDDE841C04E0480003E5AC /* ViewController.swift */,
 				27CDDE861C04E0480003E5AC /* Main.storyboard */,
 				1F7C97AE1C222D8500F05150 /* RestTableViewController.swift */,
 				1F7C97AC1C2225E000F05150 /* RestTableViewCell.swift */,
-				27118F141C1F9CA300A4B5FE /* TableViewController.swift */,
 				1FEEC7A91C0E31FB00C37E51 /* RatingControl.swift */,
 				27CDDE891C04E0480003E5AC /* Assets.xcassets */,
-				27CDDE8B1C04E0480003E5AC /* LaunchScreen.storyboard */,
 				27CDDE8E1C04E0480003E5AC /* Info.plist */,
 			);
 			path = "Brewski Dewski";
@@ -128,7 +113,7 @@
 						DevelopmentTeam = 3FT8PS6NT6;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
 								enabled = 1;
@@ -160,7 +145,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27CDDE8D1C04E0480003E5AC /* LaunchScreen.storyboard in Resources */,
 				27CDDE8A1C04E0480003E5AC /* Assets.xcassets in Resources */,
 				27CDDE881C04E0480003E5AC /* Main.storyboard in Resources */,
 			);
@@ -173,10 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27118EF21C1F991500A4B5FE /* PersonalRestaurants.xcdatamodeld in Sources */,
 				27CDDE851C04E0480003E5AC /* ViewController.swift in Sources */,
 				1FEEC7AA1C0E31FB00C37E51 /* RatingControl.swift in Sources */,
-				27118F151C1F9CA300A4B5FE /* TableViewController.swift in Sources */,
 				1F7C97AF1C222D8500F05150 /* RestTableViewController.swift in Sources */,
 				27CDDE831C04E0480003E5AC /* AppDelegate.swift in Sources */,
 				1F7C97AD1C2225E000F05150 /* RestTableViewCell.swift in Sources */,
@@ -192,14 +174,6 @@
 				27CDDE871C04E0480003E5AC /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		27CDDE8B1C04E0480003E5AC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27CDDE8C1C04E0480003E5AC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -336,19 +310,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		27118EF01C1F991500A4B5FE /* PersonalRestaurants.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				27118EF11C1F991500A4B5FE /* PersonalRestaurants.xcdatamodel */,
-			);
-			currentVersion = 27118EF11C1F991500A4B5FE /* PersonalRestaurants.xcdatamodel */;
-			path = PersonalRestaurants.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 27CDDE771C04E0480003E5AC /* Project object */;
 }

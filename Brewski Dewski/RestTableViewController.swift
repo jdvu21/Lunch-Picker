@@ -7,13 +7,38 @@
 //
 
 import UIKit
+import CloudKit
 
 class RestTableViewController: UITableViewController {
     // MARK: Properties
-    var rests = [Rest]()
+    var restaurants = [CKRecord]()
+    let privateDB = CKContainer.defaultContainer().privateCloudDatabase
+    let truePredicate = NSPredicate(value: true)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let query = CKQuery(recordType: "Restaurant", predicate: truePredicate)
+        
+                privateDB.performQuery(query, inZoneWithID: nil) {
+                        results, error in
+        
+                        if error != nil {
+                            print(error!.localizedDescription)
+                        } else {
+                            guard let results = results else {
+                                print("Error finding results")
+                                return
+                            }
+                            
+                            dispatch_async(dispatch_get_main_queue()) {
+                                self.restaurants = results
+                                self.tableView.reloadData()
+                            }
+                            
+                        }
+                    }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -21,6 +46,8 @@ class RestTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,23 +58,27 @@ class RestTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return restaurants.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cellIdentifier = "RestTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RestTableViewCell
+        
+        let restaurant = restaurants[indexPath.row]
 
-        // Configure the cell...
+        cell.nameLabel.text = restaurant["Name"] as? String
+        cell.ratingControl.rating = restaurant["Rating"] as! Int
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
