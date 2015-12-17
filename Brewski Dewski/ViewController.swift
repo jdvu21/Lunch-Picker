@@ -8,14 +8,9 @@
 
 import UIKit
 import CloudKit
-import CoreData
-//
-import Darwin
 
 
-
-//Sorting public should not be difficult, linking resturants to users will be difficult
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     
     let privateDB = CKContainer.defaultContainer().privateCloudDatabase
@@ -31,6 +26,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var selectedLunch: UITextField!
 
     @IBAction func submitNewRestaurant() {
+        
+        
+        // TODO: Better validation process, shake text box? display a message?
+        if(newPlaceName.text! == "" || newPlaceType.text! == "" || newPlaceRating.rating == 0) {
+            return
+        }
         
         //  CKRecord for Private DB
         let privateRestaurant = CKRecord(recordType: "Restaurant")
@@ -69,6 +70,7 @@ class ViewController: UIViewController {
 
     }
     
+    //  Query private CloudKit DB for restaurants you have added, and randomly select one
   @IBAction func stickWithTheFamiliar() {
         
         let query = CKQuery(recordType: "Restaurant", predicate: ratingPredicate)
@@ -80,17 +82,21 @@ class ViewController: UIViewController {
             
                 if error != nil {
                     print(error!.localizedDescription)
-                    print("This is an Error")
                 } else {
                         guard let results = results else {
-                            print("Error finding results")
+                            print("ERROR: Query returned nil")
                             return
                         }
                         
                         dispatch_async(dispatch_get_main_queue()) {
-                            let choosenRestaurant = results[random()%(results.count)]
-                            self.selectedLunch.text = (choosenRestaurant["Name"]! as! String)
-                            self.selectedLunch.reloadInputViews()
+                            if results.count == 0 {
+                                self.selectedLunch.text = "You have not added any restaurants!"
+                                self.selectedLunch.reloadInputViews()
+                            } else {
+                                let choosenRestaurant = results[random()%(results.count)]
+                                self.selectedLunch.text = (choosenRestaurant["Name"]! as! String)
+                                self.selectedLunch.reloadInputViews()
+                            }
                         }
 
                     
@@ -99,6 +105,7 @@ class ViewController: UIViewController {
         
   }
     
+    //  Query public CloudKit DB for restaurants others have added, and randomly select one
     @IBAction func trySomethingNew() {
         
         let query = CKQuery(recordType: "Restaurant", predicate: ratingPredicate)
@@ -110,10 +117,9 @@ class ViewController: UIViewController {
             
             if error != nil {
                 print(error!.localizedDescription)
-                print("This is an Error")
             } else {
                 guard let results = results else {
-                    print("Error finding results")
+                    print("ERROR: Query returned nil")
                     return
                 }
                 
@@ -126,22 +132,34 @@ class ViewController: UIViewController {
             }
         }
         
-        
-        
     }
     
     
+    //TODO: Check if user is signed into iCloud, and prompt for sign in if not
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
     }
     
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
 
+/*  
+    
+    Function to check if user is signed into iCloud....
+
+    func iCloudIsAvailable() -> Bool {
+        if let token = NSFileManager.defaultManager().ubiquityIdentityToken {
+            return true
+        } else {
+            return false
+        }
+    }
+*/
 
 }
 

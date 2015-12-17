@@ -10,10 +10,9 @@ import UIKit
 
 class RestTableViewCell: UITableViewCell {
     // MARK: Properties
-    @IBOutlet weak var nameLabel: UILabel! //control dragged
-    
-    @IBOutlet weak var photoImageView: UIImageView! // from table view
-    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dishLabel: UILabel!
+    @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
     
 

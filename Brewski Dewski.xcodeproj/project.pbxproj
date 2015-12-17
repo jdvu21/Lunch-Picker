@@ -23,7 +23,6 @@
 		1FEEC7A91C0E31FB00C37E51 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		2752DE611C06D613005B674C /* Brewski Dewski.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Brewski Dewski.entitlements"; sourceTree = "<group>"; };
 		2752DE621C06D618005B674C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		2752DE681C06D7DA005B674C /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
 		27CDDE7F1C04E0480003E5AC /* Brewski Dewski.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brewski Dewski.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CDDE821C04E0480003E5AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27CDDE841C04E0480003E5AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +46,6 @@
 		27CDDE761C04E0480003E5AC = {
 			isa = PBXGroup;
 			children = (
-				2752DE681C06D7DA005B674C /* CoreSpotlight.framework */,
 				2752DE621C06D618005B674C /* CloudKit.framework */,
 				27CDDE811C04E0480003E5AC /* Brewski Dewski */,
 				27CDDE801C04E0480003E5AC /* Products */,
@@ -269,6 +267,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Brewski Dewski/Brewski Dewski.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Brewski Dewski/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.brewski;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -282,6 +281,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Brewski Dewski/Brewski Dewski.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Brewski Dewski/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.uakron.cs.ios.brewski;
 				PRODUCT_NAME = "$(TARGET_NAME)";
